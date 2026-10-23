@@ -223,8 +223,8 @@ hr {
 # ─────────────────────────────────────────────────────────────
 @st.cache_resource
 def load_artifacts():
-    base = os.path.dirname(os.path.abspath(__file__))
-    model_path = os.path.join(base, "..", "Model", "loan_model.joblib")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    MODEL_PATH = os.path.join(BASE_DIR, "loan_model.joblib")
     scaler_path = os.path.join(base, "..", "Model", "scaler.pkl")
 
     if not os.path.exists(model_path):
