@@ -230,7 +230,7 @@ def load_artifacts():
     if not os.path.exists(MODEL_PATH):
         st.error(f"❌ Model file not found at: {model_path}")
         st.stop()
-    if not os.path.exists(scaler_path):
+    if not os.path.exists(SCALER_PATH):
         st.error(f"❌ Scaler file not found at: {scaler_path}")
         st.stop()
 
