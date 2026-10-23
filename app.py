@@ -225,7 +225,7 @@ hr {
 def load_artifacts():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     MODEL_PATH = os.path.join(BASE_DIR, "loan_model.joblib")
-    scaler_path = os.path.join(BASE_DIR, "..", "Model", "scaler.pkl")
+    SCALER_PATH = os.path.join(BASE_DIR, "..", "Model", "scaler.pkl")
 
     if not os.path.exists(MODEL_PATH):
         st.error(f"❌ Model file not found at: {model_path}")
@@ -235,7 +235,7 @@ def load_artifacts():
         st.stop()
 
     model  = joblib.load(MODEL_PATH)
-    scaler = joblib.load(scaler_path)
+    scaler = joblib.load(SCALER_PATH)
     return model, scaler
 
 model, scaler = load_artifacts()
