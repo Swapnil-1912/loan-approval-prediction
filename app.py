@@ -228,10 +228,10 @@ def load_artifacts():
     SCALER_PATH = os.path.join(BASE_DIR, "..", "Model", "scaler.pkl")
 
     if not os.path.exists(MODEL_PATH):
-        st.error(f"❌ Model file not found at: {model_path}")
+        st.error(f"❌ Model file not found at: {MODEL_PATH}")
         st.stop()
     if not os.path.exists(SCALER_PATH):
-        st.error(f"❌ Scaler file not found at: {scaler_path}")
+        st.error(f"❌ Scaler file not found at: {SCALER_PATH}")
         st.stop()
 
     model  = joblib.load(MODEL_PATH)
